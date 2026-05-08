@@ -1,0 +1,136 @@
+body {
+
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fffaf5;
+
+}
+
+nav {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff7f50;
+    padding: 15px 30px;
+
+}
+
+.logo {
+
+    font-size: 35px;
+    font-weight: bold;
+    font-family: cursive;
+    color: white;
+
+}
+
+nav ul {
+
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+}
+
+nav ul li {
+
+    display: inline;
+
+}
+
+nav ul li a {
+
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+
+}
+
+nav ul li a:hover {
+
+    color: #ffe4d6;
+
+}
+
+.search-box {
+
+    display: flex;
+    gap: 10px;
+
+}
+
+.search-box input {
+
+    padding: 8px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+
+}
+
+.search-box button {
+
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    color: #ff7f50;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.search-box button:hover {
+
+    background-color: #ffe4d6;
+
+}
+
+.container {
+
+    padding: 40px;
+
+}
+
+.container h1 {
+
+    text-align: center;
+    color: #ff7f50;
+
+}
+
+.grid {
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+
+}
+
+.box {
+
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+
+}
+
+.box img {
+
+    border-radius: 15px;
+
+}
+
+.box p {
+
+    font-weight: bold;
+    color: #ff7f50;
+
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FruitFuel - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            FruitFuel
+        </div>
+
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="health.html">Health Benefits</a></li>
+            <li><a href="more.html">More</a></li>
+            <li><a href="#" onclick="suggestSmoothie()">Can't Decide?</a></li>
+        </ul>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search smoothies...">
+            <button onclick="searchSmoothie()">Search</button>
+        </div>
+
+    </nav>
+
+    <div class="container">
+
+        <h1>Welcome to FruitFuel</h1>
+
+        <p><b>What Are Smoothies?</b></p>
+
+        <p>
+            Smoothies are blended drinks made from fruits, vegetables,
+            and nourishing ingredients such as yogurt, milk, or juices.
+            They are naturally refreshing, easy to prepare,
+            and offer a simple way to enjoy wholesome foods in one glass.
+        </p>
+
+        <br>
+
+        <p><b>Benefits of Smoothies</b></p>
+
+        <ul>
+            <li>Rich in vitamins, minerals, and antioxidants</li>
+            <li>Supports digestive health</li>
+            <li>Provides a gentle boost of energy</li>
+            <li>Customizable for meals, snacks, or healthy treats</li>
+        </ul>
+
+        <br>
+
+        <p><b>Common Types</b></p>
+
+        <ul>
+            <li>Fruit Smoothies – sweet, bright, and refreshing</li>
+            <li>Green Smoothies – balanced blends with leafy greens</li>
+            <li>Protein Smoothies – great for active lifestyles</li>
+            <li>Breakfast Smoothies – filling and quick to make</li>
+        </ul>
+
+        <br>
+
+        <p><b>Why They’re Popular</b></p>
+
+        <p>
+            Smoothies are loved for their convenience, taste,
+            and versatility. Whether you want something nourishing,
+            energizing, or simply enjoyable,
+            there is a smoothie for every mood and moment.
+        </p>
+
+        <div class="grid">
+
+            <div class="box">
+                <img height="200" width="300"
+                    src="https://stayathomemum.com.au/wp-content/uploads/2018/03/bigstock-Glass-Of-Fresh-Strawberry-Milk-344767804.jpg">
+
+                <p>Strawberry Delight 🍓</p>
+            </div>
+
+            <div class="box">
+                <img height="200" width="300"
+                    src="https://www.cubesnjuliennes.com/wp-content/uploads/2021/04/Mango-Smoothie-Recipe.jpg">
+
+                <p>Mango Magic 🥭</p>
+            </div>
+
+            <div class="box">
+                <img height="200" width="300"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMxf0MOOA6iiHtp6zWL4j0sn3pRykmYvd55A&s">
+
+                <p>Green Detox 🥬</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function suggestSmoothie() {
+
+            let number = prompt("Enter a number from 1-9");
+
+            let smoothies = [
+                "Strawberry Delight 🍓",
+                "Mango Magic 🥭",
+                "Green Detox 🥬",
+                "Banana Bliss 🍌",
+                "Berry Burst 🫐",
+                "Chocolate Protein 🍫",
+                "Pineapple Paradise 🍍",
+                "Avocado Dream 🥑",
+                "Peach Punch 🍑"
+            ];
+
+            if (number >= 1 && number <= 9) {
+
+                let randomSmoothie =
+                    smoothies[Math.floor(Math.random() * smoothies.length)];
+
+                alert("You should try: " + randomSmoothie);
+
+            }
+
+            else {
+
+                alert("Please enter a valid number from 1-9");
+
+            }
+
+        }
+
+        function searchSmoothie() {
+
+            let input =
+                document.getElementById("searchInput").value.toLowerCase();
+
+            let smoothies = {
+
+                "strawberry": "🍓 Strawberry Delight",
+                "mango": "🥭 Mango Magic",
+                "green": "🥬 Green Detox",
+                "banana": "🍌 Banana Bliss",
+                "berry": "🫐 Berry Burst",
+                "chocolate": "🍫 Chocolate Protein"
+
+            };
+
+            if (smoothies[input]) {
+
+                alert("Found: " + smoothies[input]);
+
+            }
+
+            else {
+
+                alert("No smoothie found 😔");
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FruitFuel - Health Benefits</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            FruitFuel
+        </div>
+
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="health.html">Health Benefits</a></li>
+            <li><a href="more.html">More</a></li>
+            <li><a href="#" onclick="suggestSmoothie()">Can't Decide?</a></li>
+        </ul>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search smoothies...">
+            <button onclick="searchSmoothie()">Search</button>
+        </div>
+
+    </nav>
+
+    <div class="container">
+
+        <h1>Health Benefits of Smoothies</h1>
+
+        <div class="grid">
+
+            <div class="box">
+
+                <img src="https://www.liveeatlearn.com/wp-content/uploads/2019/07/strawberry-banana-smoothie-vert1200.jpg"
+                    alt="Strawberry banana smoothie"
+                    width="300"
+                    height="200">
+
+                <h3>Strawberry Banana Smoothie 🍓🍌</h3>
+
+                <p>
+                    Rich in vitamin C, potassium, and antioxidants.
+                    Great for boosting immunity and improving digestion.
+                </p>
+
+            </div>
+
+            <div class="box">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-OPWVL7SQgQiPLPHIM4Y5tMX53udE6ISTIQ&s"
+                    alt="Green detox smoothie"
+                    width="300"
+                    height="200">
+
+                <h3>Green Detox Smoothie 🥬</h3>
+
+                <p>
+                    Packed with fiber and nutrients that cleanse
+                    the digestive system, support weight loss,
+                    and detox the body.
+                </p>
+
+            </div>
+
+            <div class="box">
+
+                <img src="https://www.freeyourfork.com/wp-content/uploads/2022/12/Mango-Pineapple-Smoothie-9.jpg"
+                    alt="Mango Pineapple Smoothie"
+                    width="300"
+                    height="200">
+
+                <h3>Mango Pineapple Smoothie 🥭🍍</h3>
+
+                <p>
+                    High in vitamin A and enzymes that improve skin health,
+                    boost immunity, and aid digestion.
+                </p>
+
+            </div>
+
+            <div class="box">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJDzwGs2zYnQKIjbMiWnl9BLKG6UjIzU6WIw&s"
+                    alt="Blueberry smoothie"
+                    width="300"
+                    height="200">
+
+                <h3>Blueberry Blast Smoothie 🫐</h3>
+
+                <p>
+                    Loaded with antioxidants that support brain function,
+                    reduce inflammation, and protect the heart.
+                </p>
+
+            </div>
+
+            <div class="box">
+
+                <img src="https://www.eatingwell.com/thmb/wbPqFA1ghAFtBmQ2RI8NvJEqvSM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/cherry-chocolate-protein-shake-beauty-291_preview_maxWidth_4000_maxHeight_4000_ppi_300_quality_100-910d4b8df85848d99ca0ff471a3e6478.jpg"
+                    alt="Chocolate protein smoothie"
+                    width="300"
+                    height="200">
+
+                <h3>Chocolate Protein Smoothie 🍫</h3>
+
+                <p>
+                    Great source of protein for muscle recovery,
+                    energy boost, and sustained fullness
+                    throughout the day.
+                </p>
+
+            </div>
+
+            <div class="box">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpxDLRHb2qosLzrIi34z3kjL3VVqmyv1d64Q&s"
+                    alt="Citrus sunrise smoothie"
+                    width="300"
+                    height="200">
+
+                <h3>Citrus Sunrise Smoothie 🍊</h3>
+
+                <p>
+                    High in vitamin C to strengthen immunity,
+                    boost energy, and promote healthy glowing skin.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function suggestSmoothie() {
+
+            let number = prompt("Enter a number from 1-9");
+
+            let smoothies = [
+
+                "Strawberry Delight 🍓",
+                "Mango Magic 🥭",
+                "Green Detox 🥬",
+                "Banana Bliss 🍌",
+                "Berry Burst 🫐",
+                "Chocolate Protein 🍫",
+                "Pineapple Paradise 🍍",
+                "Avocado Dream 🥑",
+                "Peach Punch 🍑"
+
+            ];
+
+            if (number >= 1 && number <= 9) {
+
+                let randomSmoothie =
+                    smoothies[Math.floor(Math.random() * smoothies.length)];
+
+                alert("You should try: " + randomSmoothie);
+
+            }
+
+            else {
+
+                alert("Please enter a valid number from 1-9");
+
+            }
+
+        }
+
+        function searchSmoothie() {
+
+            let input =
+                document.getElementById("searchInput").value.toLowerCase();
+
+            let smoothies = {
+
+                "strawberry": "🍓 Strawberry Delight",
+                "mango": "🥭 Mango Magic",
+                "green": "🥬 Green Detox",
+                "banana": "🍌 Banana Bliss",
+                "berry": "🫐 Berry Burst",
+                "chocolate": "🍫 Chocolate Protein",
+                "pineapple": "🍍 Pineapple Paradise",
+                "blueberry": "🫐 Blueberry Blast",
+                "citrus": "🍊 Citrus Sunrise"
+
+            };
+
+            if (smoothies[input]) {
+
+                alert("Found: " + smoothies[input]);
+
+            }
+
+            else {
+
+                alert("No smoothie found 😔");
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

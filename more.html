@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FruitFuel - More Ideas</title>
+    <link rel="stylesheet" href="more.css">
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            FruitFuel
+        </div>
+
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="health.html">Health Benefits</a></li>
+            <li><a href="more.html">More</a></li>
+            <li><a href="#" onclick="suggestSmoothie()">Can't Decide?</a></li>
+        </ul>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search smoothies...">
+            <button onclick="searchSmoothie()">Search</button>
+        </div>
+
+    </nav>
+
+    <div class="container">
+
+        <h1>More Smoothie Ideas</h1>
+
+        <div class="grid">
+
+            <div class="box">
+
+                <img src="https://www.jessicagavin.com/wp-content/uploads/2016/08/refreshing-peach-ginger-orange-smoothie-vegan-1200.jpg"
+                    height="200"
+                    width="300">
+
+                <p>Peach Ginger Glow Smoothie 🍑</p>
+
+            </div>
+
+            <div class="box">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFFydHM0o_Ujlipbw1fSuZ0eVBjJDAkv_FtA&s"
+                    height="200"
+                    width="300">
+
+                <p>Tropical Coconut Paradise 🥥</p>
+
+            </div>
+
+            <div class="box">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5u_qi1kNoILguX6p8h6zf4zUmsY15OOswzg&s"
+                    height="200"
+                    width="300">
+
+                <p>Raspberry Oat Breakfast Smoothie 🫐</p>
+
+            </div>
+
+            <div class="box">
+
+                <img src="https://loveonetoday.com/wp-content/uploads/2018/01/Love-One-Today-Avocado-Recipes-Featured-The-Ultimate-Avocado-Smoothie.jpg"
+                    height="200"
+                    width="300">
+
+                <p>Avocado Spinach Power Smoothie 🥑</p>
+
+            </div>
+
+            <div class="box">
+
+                <img src="https://www.wellplated.com/wp-content/uploads/2020/07/Creamy-Watermelon-Smoothie.jpg"
+                    height="200"
+                    width="300">
+
+                <p>Watermelon Mint Refresher 🍉</p>
+
+            </div>
+
+            <div class="box">
+
+                <img src="https://searchingforspice.com/wp-content/uploads/2021/09/apple-cinnamon-smoothie-14.jpg"
+                    height="200"
+                    width="300">
+
+                <p>Apple Cinnamon Shake 🍎</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function suggestSmoothie() {
+
+            let number = prompt("Enter a number from 1-9");
+
+            let smoothies = [
+
+                "Strawberry Delight 🍓",
+                "Mango Magic 🥭",
+                "Green Detox 🥬",
+                "Banana Bliss 🍌",
+                "Berry Burst 🫐",
+                "Chocolate Protein 🍫",
+                "Pineapple Paradise 🍍",
+                "Avocado Dream 🥑",
+                "Peach Punch 🍑"
+
+            ];
+
+            if (number >= 1 && number <= 9) {
+
+                let randomSmoothie =
+                    smoothies[Math.floor(Math.random() * smoothies.length)];
+
+                alert("You should try: " + randomSmoothie);
+
+            }
+
+            else {
+
+                alert("Please enter a valid number from 1-9");
+
+            }
+
+        }
+
+        function searchSmoothie() {
+
+            let input =
+                document.getElementById("searchInput").value.toLowerCase();
+
+            let smoothies = {
+
+                "peach": "🍑 Peach Ginger Glow Smoothie",
+                "coconut": "🥥 Tropical Coconut Paradise",
+                "raspberry": "🫐 Raspberry Oat Breakfast Smoothie",
+                "avocado": "🥑 Avocado Spinach Power Smoothie",
+                "watermelon": "🍉 Watermelon Mint Refresher",
+                "apple": "🍎 Apple Cinnamon Shake"
+
+            };
+
+            if (smoothies[input]) {
+
+                alert("Found: " + smoothies[input]);
+
+            }
+
+            else {
+
+                alert("No smoothie found 😔");
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
